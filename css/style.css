@@ -1,0 +1,186 @@
+@import url('./../fonts/Montserrat-Regular.ttf');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+body{
+    background: url('./../img/logo.png') no-repeat;
+    background-size: 40%;
+    background-attachment: fixed;
+    background-position: center;
+    backdrop-filter: blur(6px) !important;
+    font-family: 'Montserrat';
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    padding: 40px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.input,
+select,
+input{
+    height: 60px !important;
+    width: 100%;
+    max-width: 1000px !important;
+    margin-top: 10px !important;
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    font-family: 'Montserrat' !important;
+    color: #1a1a1a ;
+    padding: 0 30px !important;
+    border-radius: 8px !important;
+    border: 1px solid #1976D2 !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    transition: 0.5s;
+}
+input[disabled]:hover{
+    box-shadow: none !important;
+}
+.input:hover,
+select:hover,
+input:hover{
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+}
+input::placeholder{
+    font-family: 'Montserrat' !important;
+    font-weight: 300 !important;
+    color: #1a1a1a !important;
+}
+.group-input,
+.select{
+    position: relative;
+    width: 100% !important;
+    max-width: 1000px !important;
+}
+.group-input input{
+    width: 32.5% !important;
+}
+.select::after{
+    content: "🡣";
+    padding: 0 8px;
+    font-size: 30px;
+    position: absolute;
+    right: -5px;
+    top: 21px;
+    z-index: 1;
+    text-align: center;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+h3{
+    margin-top: 10px !important;
+}
+.group-input{
+    display: flex;
+    justify-content: space-between;
+}
+.statya,
+.project,
+.select_code_education_dr,
+.select_code_education_1,
+.select_code_education_2,
+.select_code_education_3,
+.select_code_education_4,
+.select_code_education_5,
+.select_code_education_6,
+.select_code_education_7,
+.select_code_education_8,
+.select_code_education_9,
+.select_koshevogo,
+.select_octyabrskaya,
+.select_zaoch,
+.select_maya{
+    display: none;
+}
+.statya.active,
+.project.active,
+.select_code_education_dr.active,
+.select_code_education_1.active,
+.select_code_education_2.active,
+.select_code_education_3.active,
+.select_code_education_4.active,
+.select_code_education_5.active,
+.select_code_education_6.active,
+.select_code_education_7.active,
+.select_code_education_8.active,
+.select_code_education_9.active,
+.select_koshevogo.active,
+.select_octyabrskaya.active,
+.select_zaoch.active,
+.select_maya.active{
+    display: block;
+}
+h3{
+    margin-top: 30px !important;
+}
+.dyet input{
+    width: 49% !important;
+}
+input#file-upload-button{
+    border: none !important;
+    background: none !important;
+}
+.input{
+    position: relative;
+    background: #fff;
+}
+.input input{
+    position: absolute;
+    left: 0 !important;
+    bottom: 0 !important;
+    opacity: 0;
+}
+.input label span img{
+    position: absolute;
+    width: 30px;
+    top: 13px;
+    right: 30px !important;
+}
+.input label .input__file-button-text{
+    position: absolute;
+    top: 17px;
+    font-size: 20px;
+    left: 30px !important;
+}
+.send_mess{
+    width: 100% !important;
+    background: #fff;
+    max-width: 500px !important;
+    transition: 0.5s;
+}
+.send_mess:hover{
+    color: #fff;
+    background: #1976D2;
+}
+@media (max-width: 900px){
+    .group-input{
+        flex-direction: column;
+    }
+    .group-input input{
+        width: 100% !important;
+    }
+    section{
+        padding: 10px;
+    }
+    .send_mess{
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}

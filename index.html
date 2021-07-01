@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Форма сообщения</title>
+</head>
+<body>
+    <section>
+        <h1>Форма отправки сообщения</h1>
+        <form id="form_kutts">
+            <h3>Организация</h3>
+            <input type="text" placeholder="Организация" value="" id="organization" name="organization" class="organization" required>
+            <h3>Дата проведения</h3>
+            <input type="date" value="" id="date" name="date" class="date" required>
+            <h3>Форма проведения мероприятия</h3>
+            <div class="select">
+                <select name="type_education" id="type_education" class="type_education" placeholder="" required>
+                    <option value="" disabled selected>Форма проведения мероприятия (выберите из списка)</option>
+                    <option value="Очная">Очная</option>
+                    <option value="Дистанционная">Дистанционная</option>
+                    <option value="Заочная">Заочная</option>
+                </select>
+            </div>
+            <h3>Название мероприятия</h3>
+            <input type="text" placeholder="Наименование мероприятия" value="" id="event" name="event" class="event" required>
+            <h3>Секция / Направление / Номинация (при наличии)</h3>
+            <input type="text" placeholder="Секция / Направление / Номинация (при наличии)" value="" id="nomination" name="nomination" class="nomination" required disabled>
+            <h3>Данные руководителя</h3>
+            <div class="group-input">
+                <input type="text" placeholder="Фамилия" value="" id="surname" name="surname" class="surname" required>
+                <input type="text" placeholder="Имя" value="" id="name" name="name" class="name" required>
+                <input type="text" placeholder="Отчество" value="" id="patronymic" name="patronymic" class="patronymic" required>
+            </div>
+            <h3>Данные участника</h3>
+            <div class="group-input">
+                <input type="text" placeholder="Фамилия" value="" id="surname_student" name="surname_student" class="surname_student" required>
+                <input type="text" placeholder="Имя" value="" id="name_student" name="name_student" class="name_student" required>
+                <input type="text" placeholder="Отчество" value="" id="patronymic_student" name="patronymic_student" class="patronymic_student" required>
+            </div>
+            <h3>УГС (укрупненнённые группы специальностей)</h3>
+            <div class="select">
+                <select name="ugs" id="ugs" class="ugs" placeholder="" required>
+                    <option value="" disabled selected>УГС (выберите из списка)</option>
+                    <option value="43.00.00 Сервис и туризм">43.00.00 Сервис и туризм</option>
+                    <option value="23.00.00 Техника и технологии наземного транспорта">23.00.00 Техника и технологии наземного транспорта</option>
+                    <option value="08.00.00 Техника и технологии строительства">08.00.00 Техника и технологии строительства</option>
+                    <option value="38.00.00 Экономика и управление">38.00.00 Экономика и управление</option>
+                    <option value="09.00.00 Информатика и вычислительная техника">09.00.00 Информатика и вычислительная техника</option>
+                    <option value="40.00.00 Юриспруденция">40.00.00 Юриспруденция</option>
+                    <option value="19.00.00 Промышленная экология и биотехнологии">19.00.00 Промышленная экология и биотехнологии</option>
+                    <option value="54.00.00 Изобразительное и прикладные виды искусств">54.00.00 Изобразительное и прикладные виды искусств</option>
+                    <option value="46.00.00 История и археологии">46.00.00 История и археологии</option>
+                    <option value="Другое">Другое</option>
+                </select>
+            </div>
+            <h3>Специальность</h3>
+            <input type="text" disabled placeholder="Выберите сначала УГС (при наличии)" value="" class="false_input_body_education">
+            <div class="select select_code_education_dr">
+                <select name="code_education" id="code_education" class="code_education" placeholder="" required>
+                    <option value="" disabled selected>Специальность (выберите из списка) без УГС</option>
+                    <option value="41.01.02 Парикмахер">41.01.02 Парикмахер</option>
+                    <option value="б/н Маляр строительный">б/н Маляр строительный</option>
+                    <option value="19601 Швея">19601 Швея</option>
+                    <option value="17544 Рабочий по комплексному обслуживанию и ремонту зданий">17544 Рабочий по комплексному обслуживанию и ремонту зданий</option>
+                    <option value="29.01.07 Портной">29.01.07 Портной</option>
+                </select>
+            </div>
+            <div class="select select_code_education_1">
+                <select name="code_education_1" id="code_education_1" class="code_education_1" placeholder="" required>
+                    <option value="" disabled selected>Специальность (выберите из списка) по УГС 43.00.00</option>
+                    <option value="43.01.09 Повар, кондитер">43.01.09 Повар, кондитер</option>
+                    <option value="43.02.02 Парикмахерское искусство">43.02.02 Парикмахерское искусство</option>
+                    <option value="43.02.03 Стилистика и искусство визажа">43.02.03 Стилистика и искусство визажа</option>
+                    <option value="43.02.14 Гостиничное дело">43.02.14 Гостиничное дело</option>
+                    <option value="43.02.15 Поварское и кондитерское дело">43.02.15 Поварское и кондитерское дело</option>
+                </select>
+            </div>
+            <div class="select select_code_education_2">
+                <select name="code_education_2" id="code_education_2" class="code_education_2" placeholder="" required>
+                    <option value="" disabled selected>Специальность (выберите из списка) по УГС 23.00.00</option>
+                    <option value="23.01.03 Автомеханик">23.01.03 Автомеханик</option>
+                    <option value="23.02.01 Организация перевозок и управление на транспорте (по видам)">23.02.01 Организация перевозок и управление на транспорте (по видам)</option>
+                </select>
+            </div>
+            <div class="select select_code_education_3">
+                <select name="code_education_3" id="code_education_3" class="code_education_3" placeholder="" required>
+                    <option value="" disabled selected>Специальность (выберите из списка) по УГС 08.00.00</option>
+                    <option value="08.01.06 Мастер сухого строительства">08.01.06 Мастер сухого строительства</option>
+                    <option value="08.01.07 Мастер общественных работ">08.01.07 Мастер общественных работ</option>
+                    <option value="08.01.08 Мастер отделочных строительных работ">08.01.08 Мастер отделочных строительных работ</option>
+                    <option value="08.02.01 Строительство и эксплуатация зданий и сооружений">08.02.01 Строительство и эксплуатация зданий и сооружений</option>
+                </select>
+            </div>
+            <div class="select select_code_education_4">
+                <select name="code_education_4" id="code_education_4" class="code_education_4" placeholder="" required>
+                    <option value="" disabled selected>Специальность (выберите из списка) по УГС 38.00.00</option>
+                    <option value="38.02.04 Коммерция (по отраслям)">38.02.04 Коммерция (по отраслям)</option>
+                    <option value="38.02.06 Финансы">38.02.06 Финансы</option>
+                    <option value="38.01.01 Экономика и бухгалтерский учет (по отраслям)">38.01.01 Экономика и бухгалтерский учет (по отраслям)</option>
+                    <option value="38.02.03 Операционная деятельность в логистике">38.02.03 Операционная деятельность в логистике</option>
+                </select>
+            </div>
+            <div class="select select_code_education_5">
+                <select name="code_education_5" id="code_education_5" class="code_education_5" placeholder="" required>
+                    <option value="" disabled selected>Специальность (выберите из списка) по УГС 09.00.00</option>
+                    <option value="09.01.03 Мастер по обработке цифровой информации">09.01.03 Мастер по обработке цифровой информации</option>
+                    <option value="09.02.05 Прикладная информатика (по отраслям)">09.02.05 Прикладная информатика (по отраслям)</option>
+                    <option value="09.02.07 Информационные системы и программирование">09.02.07 Информационные системы и программирование</option>
+                </select>
+            </div>
+            <div class="select select_code_education_6">
+                <select name="code_education_6" id="code_education_6" class="code_education_6" placeholder="" required>
+                    <option value="" disabled selected>Специальность (выберите из списка) по УГС 40.00.00</option>
+                    <option value="40.02.02 Правоохранительная деятельность">40.02.02 Правоохранительная деятельность</option>
+                </select>
+            </div>
+            <div class="select select_code_education_7">
+                <select name="code_education_7" id="code_education_7" class="code_education_7" placeholder="" required>
+                    <option value="" disabled selected>Специальность (выберите из списка) по УГС 19.00.00</option>
+                    <option value="19.02.10 Технология продукции общественного питания">19.02.10 Технология продукции общественного питания</option>
+                </select>
+            </div>
+            <div class="select select_code_education_8">
+                <select name="code_education_8" id="code_education_8" class="code_education_8" placeholder="" required>
+                    <option value="" disabled selected>Специальность (выберите из списка) по УГС 54.00.00</option>
+                    <option value="54.01.01 Исполнитель художественно-оформительских работ">54.01.01 Исполнитель художественно-оформительских работ</option>
+                    <option value="54.02.01 Дизайн (по отраслям)">54.02.01 Дизайн (по отраслям)</option>
+                </select>
+            </div>
+            <div class="select select_code_education_9">
+                <select name="code_education_9" id="code_education_9" class="code_education_9" placeholder="" required>
+                    <option value="" disabled selected>Специальность (выберите из списка) по УГС 46.00.00</option>
+                    <option value="46.01.03 Делопроизводитель">46.01.03 Делопроизводитель</option>
+                    <option value="46.02.01 Документационное обеспечение управления и архивоведение">46.02.01 Документационное обеспечение управления и архивоведение</option>
+                </select>
+            </div>
+
+
+
+            <h3>Корпус</h3>
+            <div class="select">
+                <select name="address_body" id="address_body" class="address_body" placeholder="" required>
+                    <option value="" disabled selected>Корпус (выберите из списка)</option>
+                    <option value="ул. О. Кошевого, 21">ул. О. Кошевого, 21</option>
+                    <option value="ул. Октябрьская, 99">ул. Октябрьская, 99</option>
+                    <option value="ул. 1 Мая, 23">ул. 1 Мая, 23</option>
+                    <option value="Заочное обучение">Заочное обучение</option>
+                </select>
+            </div>
+
+            
+            <h3>Группа студента</h3>
+            <!-- КОШЕВОГО -->
+            <div class="select select_koshevogo">
+                <select name="koshevogo" id="koshevogo" class="koshevogo" placeholder="" required>
+                    <option value="" disabled selected>Группа по корпусу ул. О. Кошевого, 21 (выберите из списка)</option>
+                    <option value="ПГ-13">ПГ-13</option>
+                    <option value="ГД-108">ГД-108</option>
+                    <option value="ГД-208">ГД-208</option>
+                    <option value="ИС-106">ИС-106</option>
+                    <option value="ИС-206">ИС-206</option>
+                    <option value="ИС-306">ИС-306</option>
+                    <option value="ИС-406">ИС-406</option>
+                    <option value="К-105">К-105</option>
+                    <option value="К-205">К-205</option>
+                    <option value="П-101">П-101</option>
+                    <option value="П-102">П-102</option>
+                    <option value="П-201">П-201</option>
+                    <option value="П-202">П-202</option>
+                    <option value="П-301">П-301</option>
+                    <option value="П-302">П-302</option>
+                    <option value="П-303">П-303</option>
+                    <option value="ПКД-204">ПКД-204</option>
+                </select>   
+            </div>
+            <!-- КОШЕВОГО -->
+
+            <!-- ОКТЯБРЬСКАЯ -->
+            <div class="select select_octyabrskaya">
+                <select name="octyabrskaya" id="octyabrskaya" class="octyabrskaya" placeholder="" required> 
+                    <option value="" disabled selected>Группа по корпусу ул. Октябрьская, 99 (выберите из списка)</option>
+                    <option value="ПМ-14">ПМ-14</option>
+                    <option value="ПК-11">ПК-11</option>
+                    <option value="ПШ-12">ПШ-12</option>
+                    <option value="МР-111">МР-111</option>
+                    <option value="МР-211">МР-211</option>
+                    <option value="ПД-107">ПД-107</option>
+                    <option value="ПД-201">ПД-201</option>
+                    <option value="ПД-218">ПД-218</option>
+                    <option value="ПД-307">ПД-307</option>
+                    <option value="СЗ-112">СЗ-112</option>
+                    <option value="СЗ-212">СЗ-212</option>
+                    <option value="СЗ-312">СЗ-312</option>
+                    <option value="СТ-209">СТ-209</option>
+                </select>
+            </div>
+            <!-- ОКТЯБРЬСКАЯ -->
+
+            <!-- 1 МАЯ -->
+            <div class="select select_maya">
+                <select name="maya" id="maya" class="maya" placeholder="" required>
+                    <option value="" disabled selected>Группа по корпусу ул. 1 Мая, 23 (выберите из списка)</option>
+                    <option value="А-310">А-310</option>
+                    <option value="Б-203">Б-203</option>
+                    <option value="Д-116">Д-116</option>
+                    <option value="Д-216">Д-216</option>
+                    <option value="Д-316">Д-316</option>
+                    <option value="ДОУ-217">ДОУ-217</option>
+                    <option value="ОД-114">ОД-114</option>
+                    <option value="ОД-124">ОД-124</option>
+                    <option value="ОД-214">ОД-214</option>
+                    <option value="ОП-213">ОП-213</option>
+                    <option value="ОП-313">ОП-313</option>
+                    <option value="ПИ-115">ПИ-115</option>
+                    <option value="ПИ-215">ПИ-215</option>
+                    <option value="Ф-109">Ф-109</option>
+                </select>
+            </div>
+            <!-- 1 МАЯ -->
+            <!-- заочники -->
+            <div class="select select_zaoch">
+                <select name="zaoch" id="zaoch" class="zaoch" placeholder="" required>
+                    <option value="" disabled selected>Группа заочного обучения (выберите из списка)</option>
+                    <option value="ТП-38">ТП-38</option>
+                </select>
+            </div>
+            <!-- заочники -->
+            <input type="text" disabled placeholder="Выберите сначала корпус" value="" class="false_input_body">
+            <h3>Вид наградного документа</h3>
+            <div class="select">
+                <select name="reward" id="reward" class="reward" placeholder="" required>
+                    <option value="" disabled selected>Вид наградного документа (выберите из списка)</option>
+                    <option value="Диплом 1 степени">Диплом 1 степени</option>
+                    <option value="Диплом 2 степени">Диплом 2 степени</option>
+                    <option value="Диплом 3 степени">Диплом 3 степени</option>
+                    <option value="Диплом победителя">Диплом победителя</option>
+                    <option value="Грамота">Грамота</option>
+                    <option value="Сертификат">Сертификат</option>
+                </select>
+            </div>
+            <h3>Серия и № документа</h3>
+            <div class="group-input dyet">
+                <input type="text" placeholder="Серия документа (при наличии)" value="" id="cery_doc" name="cery_doc" class="cery_doc" required>
+                <input type="text" placeholder="Номер документа (при наличии)" value="" id="numb_doc" name="numb_doc" class="numb_doc" required>
+            </div>
+            <h3>Вид работы</h3>
+            <div class="select">
+                <select name="view_work" id="view_work" class="view_work" placeholder="" required>
+                    <option value="" disabled selected>Вид работы (выберите из списка)</option>
+                    <option value="Статья">Статья</option>
+                    <option value="Проект">Проект</option>
+                </select>
+            </div>
+            <h3>Название работы</h3>
+            <input type="text" disabled placeholder="Выберите сначала вид работы" value="" class="false_input_body_view_work">
+            <input type="text" placeholder="Название статьи" value="" id="statya" name="statya" class="statya" required>
+            <input type="text" placeholder="Название проекта" value="" id="project" name="project" class="project" required>
+            <h3>Файл наградного документа</h3>
+            <div class="input">
+                <input type="file" placeholder="Прикрепите файл" value="" id="file" name="file" class="file" required>
+                <label for="file" class="input__file-button">
+                    <span class="input__file-icon-wrapper"><img class="input__file-icon" src="./img/747416.png"></span>
+                    <span class="input__file-button-text">Выберите файл</span>
+                 </label>
+            </div>
+            <h3>Отправить данные</h3>
+            <input type="submit" value="Отправить данные" id="send_mess" name="send_mess" class="send_mess">
+        </form>
+    </section>
+
+    <script src="./script/script.js"></script>
+</body>
+</html>
